@@ -11,7 +11,7 @@ import (
 const parameterized = false
 
 func main() {
-	dsn := "flightsql://localhost:8082/company_sensors?timeout=10s"
+	dsn := "iox://localhost:8082/company_sensors?timeout=10s"
 	db, err := sql.Open("flightsql", dsn)
 	if err != nil {
 		log.Fatalf("open failed: %v", err)
