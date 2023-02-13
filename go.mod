@@ -30,4 +30,4 @@ require (
 	google.golang.org/protobuf v1.28.1 // indirect
 )
 
-replace github.com/apache/arrow/go/v12 => /home/sven/Development/InfluxData/arrow/go
+replace github.com/apache/arrow/go/v12 v12.0.0-00010101000000-000000000000 => github.com/srebhan/arrow/go/v12 v12.0.0-20230213142727-b6ef3b42f734
