@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/apache/arrow/go/v12/arrow/flight/flightsql"
+	flightsql "github.com/apache/arrow/go/v12/arrow/flight/flightsql/driver"
 )
 
 const parameterized = false
