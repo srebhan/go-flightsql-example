@@ -4,15 +4,23 @@ import (
 	"database/sql"
 	"fmt"
 	"log"
+	"time"
 
-	_ "github.com/apache/arrow/go/v12/arrow/flight/flightsql"
+	"github.com/apache/arrow/go/v12/arrow/flight/flightsql"
 )
 
 const parameterized = false
 
 func main() {
-	dsn := "iox://localhost:8082/company_sensors?timeout=10s"
-	db, err := sql.Open("flightsql", dsn)
+	config := flightsql.DriverConfig{
+		Address: "localhost:8082",
+		Token:   "",
+		Timeout: 10 * time.Second,
+		Params: map[string]string{
+			"iox-namespace-name": "company_sensors",
+		},
+	}
+	db, err := sql.Open("flightsql", config.DSN())
 	if err != nil {
 		log.Fatalf("open failed: %v", err)
 	}
