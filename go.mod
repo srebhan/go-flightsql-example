@@ -2,7 +2,7 @@ module github.com/srebhan/go-flightsql-example
 
 go 1.19
 
-require github.com/apache/arrow/go/v12 v12.0.0-00010101000000-000000000000
+require github.com/apache/arrow/go/v12 v12.0.0-20230412180202-5184d7c17599
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
@@ -28,5 +28,3 @@ require (
 	google.golang.org/grpc v1.49.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 )
-
-replace github.com/apache/arrow/go/v12 v12.0.0-00010101000000-000000000000 => github.com/srebhan/arrow/go/v12 v12.0.0-20230310121409-8b24c57d7173
